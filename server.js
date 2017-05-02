@@ -33,5 +33,9 @@ var routes = require("./controllers/burgersController.js");
 // ?
 app.use("/", routes);
 
-// Tells express to listen at the given port number
-app.listen(PORT);
+// Syncing sequelize models and then starting express app
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log("App listening on PORT " + PORT);
+    });
+});
