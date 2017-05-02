@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 8080;
 // Initializes express
 var app = express();
 
+// Requiring models for syncing
+var db = require("./models");
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
 
