@@ -1,4 +1,4 @@
-// Dependensies
+// Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
-// Requires handlesbars
+// Requires handlebars
 var exphbs = require("express-handlebars");
 // Sets express engine to handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
